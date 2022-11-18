@@ -1,10 +1,4 @@
-/*
-body {
-    font-family: 'Open Sans'e', serif;
-    font-size: 12px;
-}
-*/
-
+/* fonts */
 @font-face {
     font-family: 'syne-mono';
     src: url(../fonts/Syne-Mono.otf);
@@ -20,14 +14,17 @@ body {
     src: url(../fonts/Syne-Extra.otf);
 }
 
+/* whole page */
 html { 
-    background: url(../images/parents-summer-2022.jpeg) no-repeat center center fixed; 
+    background: url(../images/parents-summer-2022.jpeg) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    background-color:#D9D6D0 ;
  }
 
+ /* styles text */
 body {
     font-family: 'syne-bold';
     font-size:20px;
@@ -41,13 +38,9 @@ body {
 a {
     color:#0D0C00;
     text-decoration: underline;
+    text-underline-offset: 0.1em;
 }
 
 a:hover {
-    color:#698C86;
-}
-
-img {
-    display: block;
-    margin: 0 auto;
+    color:#BF9004;
 }
