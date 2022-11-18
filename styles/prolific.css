@@ -1,0 +1,180 @@
+@font-face {
+    font-family: 'syne';
+    src: url(../fonts/Syne-Regular.otf);
+  }
+
+  @font-face {
+    font-family: 'syne-bold';
+    src: url(../fonts/Syne-Bold.otf);
+  }
+
+  @font-face {
+    font-family: 'syne-extra';
+    src: url(../fonts/Syne-Extra.otf);
+  }
+
+  :root {
+    --black: #3a3a3a;
+    --white: #fff;
+    --green: #b2a949;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  img {
+    display: inline-block;
+    justify-content: center;
+    margin: auto auto;
+    max-width: 100%;
+  }
+  ol {
+    list-style: none;
+  }
+
+  a {
+    text-decoration: none;
+    color: #BF9004;
+  }
+
+  body {
+    margin: 10px auto;
+    color: #0D0C00;
+    font-size: 14px;
+  }
+
+  .author-archive {
+    padding: 2rem;
+  }
+
+  .container {
+    max-width: 1300px;
+    margin: 0 auto;
+  }
+
+  h1 {
+    text-align: left;
+    margin-bottom: 2rem;
+  }
+
+  input[type="radio"] {
+    position: absolute;
+    left: -9999px;
+    font-family:'syne-extra';
+  }
+
+
+  /* FILTERS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+  .filters {
+    font-family: 'syne-extra';
+    text-align: left;
+    margin-bottom: 2rem;
+  }
+
+  .filters * {
+    display: inline-block;
+  }
+
+  .filters label {
+    padding: 10px 30px;
+    margin-bottom: 0.25rem;
+    border-radius: 2rem;
+    min-width: 50px;
+    line-height: normal;
+    cursor: pointer;
+    transition: all 0.1s;
+  }
+
+  .filters label:hover {
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+    color: #BF9004;
+  }
+
+
+  /* FILTERED ELEMENTS (POSTS)
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+  .posts {
+    display: grid;
+    grid-gap: 1.5rem;
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  .posts .post {
+    background: #fff;
+    aspect-ratio: 1;
+    text-align: center;
+    color: #0D0C00;
+    font-family:'Times New Roman', Times, serif;
+  }
+
+  .posts .title{
+    font-size: 12px;
+  }
+/*
+  .posts .post-title:hover {
+    text-decoration: underline;
+  }
+  */
+
+  .posts figcaption {
+    padding: 5px 0;
+  }
+
+  .posts .post-categories a {
+    padding: 0.2rem 0.5rem;
+    border-radius: 1rem;
+    border: 1px solid;
+    line-height: normal;
+    transition: all 0.1s;
+  }
+
+  .posts .post-categories a:hover {
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+    color: #BF9004;
+  }
+
+
+  /* FILTERING RULES
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+  [value="All"]:checked~.filters [for="All"],
+  [value="gathering"]:checked~.filters [for="gathering"],
+  [value="visuals"]:checked~.filters [for="visuals"],
+  [value="words"]:checked~.filters [for="words"] {
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+    color: #BF9004;
+  }
+
+  [value="All"]:checked~.posts [data-category] {
+    display: block;
+  }
+
+  [value="gathering"]:checked~.posts .post:not([data-category~="gathering"]),
+  [value="visuals"]:checked~.posts .post:not([data-category~="visuals"]),
+  [value="words"]:checked~.posts .post:not([data-category~="words"]) {
+    display: none;
+  }
+
+
+  /* MQ
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+  @media screen and (max-width: 900px) {
+    .posts {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  @media screen and (max-width: 650px) {
+    html {
+      font-size: 14px;
+    }
+
+    .posts {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
