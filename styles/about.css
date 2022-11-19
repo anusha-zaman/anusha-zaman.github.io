@@ -1,0 +1,134 @@
+/* fonts */
+@font-face {
+    font-family: 'syne-mono';
+    src: url(../fonts/Syne-Mono.otf);
+}
+
+@font-face {
+    font-family: 'syne-bold';
+    src: url(../fonts/Syne-Bold.otf);
+}
+
+@font-face {
+    font-family: 'syne-extra';
+    src: url(../fonts/Syne-Extra.otf);
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 0.9em;
+}
+
+h1 {
+    font-family: 'syne-extra';
+}
+
+/* header*/
+#header {
+
+    z-index: 9999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 1em 2em;
+    width: 100%;
+    text-align: left;
+    display: flex;
+}
+
+#header a {
+    text-decoration: none;
+    font-family: 'syne-extra';
+    color: #0D0C00;
+}
+
+#header a:not(:first-of-type) { /* spaces links*/
+    margin-left: 2em;
+}
+
+#header a:hover{
+    color:#BF9004;
+}
+
+/* 2-column about */
+/* building columns, no constraint on number */
+#about {
+    font-size: 1em;
+    padding: 1.5em 0.5em;
+}
+
+#about #page {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+#about #page .box {
+    position: relative;
+    display: inline-block;
+    padding: 1em 1em;
+    margin-top:1em;
+}
+
+#about #page .box:not(:first-of-type) {
+    margin-left: 0.5em;
+}
+
+@media only screen and (max-width: 1200px) { 
+    #about #page .box:not(:first-of-type) {
+        margin-left: 0;
+    }
+}
+
+
+ /* building boxes */
+#about .box._small {
+    width: 220px;
+}
+
+ /* building boxes */
+ #about .box._small img{
+    width: 150px;
+}
+
+#about .box._large {
+    width: 800px;
+}
+
+#about .box._large img{
+    width:250px;
+    padding:0;
+}
+
+/* text*/
+
+#about #page p {
+    font-size: 1em;
+    line-height: 120%;
+    color:#0D0C00;
+    width: 80%;
+    margin:0;
+    padding-bottom: 1em;
+}
+
+#about #page a {
+    color: #0D0C00;
+}
+
+#about #page a:hover{
+    color:#BF9004;
+}
+
+#about #page ul {  /*interests*/
+    list-style-type: none;
+    margin:0;
+    padding:0;
+    line-height: 120%;
+}
+
+#about h3 {
+    font-family: "times new roman";
+    font-size: 1rem;
+    font-weight: normal;
+    letter-spacing: -0.5px;
+}
