@@ -16,7 +16,7 @@
 
 /* whole page */
 html { 
-    background: url(../images/parents-summer-2022.jpeg) no-repeat center center fixed;
+    background: url(../images/me2.jpg) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -28,7 +28,7 @@ html {
 body {
     font-family: 'syne-bold';
     font-size:20px;
-    color:#0D0C00;
+    color:#D9D6D0 ;
     resize:auto;
     width: 600px;
     margin: 0 auto; /*TB, LR*/
@@ -36,7 +36,7 @@ body {
 }
 
 a {
-    color:#0D0C00;
+    color:#D9D6D0;
     text-decoration: underline;
     text-underline-offset: 0.1em;
 }
